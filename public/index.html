@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAxlLJeeuUNt8mdChZ9Pdz9CjdxMSbcbwU",
+        authDomain: "fir-demo-95240.firebaseapp.com",
+        databaseURL: "https://fir-demo-95240.firebaseio.com",
+        projectId: "fir-demo-95240",
+        storageBucket: "fir-demo-95240.appspot.com",
+        messagingSenderId: "826052008699",
+        appId: "1:826052008699:web:e356765105c1b9a12dae5e",
+        measurementId: "G-TEXPS2NRLV"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/locales/de/faker.de.min.js" integrity="sha512-QtII+hrwI7sPwV7tkZbzqD9tR1ag3c10GpWqCfG0zGWcBk4Ak4ztZLibCfuwcWb5rJswOB2ly6EEkOEk8VKzZQ==" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+</head>
+<body class="container">
+    <h1 id="heading">Firebase running  </h1>
+
+    <section id="whenSignedOut">
+        <button class="btn btn-primary" id = "signInBtn">sign in with google</button>
+    </section>
+
+    <section id="whenSignedIn" hidden="true" hidden="true">
+
+        <div id="userDetails"></div>
+
+        <button class="btn btn-danger" id="signOutBtn">Sign Out</button>
+
+    </section>
+
+    <section>
+        <ul id="thingsList">
+            
+        </ul>
+        <button class="btn btn-success" id="createThing"> Create Random Thing </ul>
+
+    </section>
+</body>
+</html>
